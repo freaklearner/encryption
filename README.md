@@ -11,7 +11,7 @@
 
 ### Response:
 ### {
-###    "token": "<encrypted-token>"
+###    "token": "encrypted-token"
 ### }'
 
 ## Get Decrypted payload from token
@@ -19,7 +19,7 @@
 ### Method: GET
 ### Header:
 ### {
-###  "Authorization: Bearer <encrypted-token>"
+###  "Authorization: Bearer encrypted-token"
 ### } 
 
 ### Response:
