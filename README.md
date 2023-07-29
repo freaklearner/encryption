@@ -14,7 +14,7 @@
 ###    "token": "encrypted-token"
 ### }'
 
-## Get Decrypted payload from token
+## Get Decryphered payload from token
 ### URL: http://localhost:3000/v1/encryption/payload
 ### Method: GET
 ### Header:
