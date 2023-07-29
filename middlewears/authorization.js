@@ -5,9 +5,9 @@ module.exports = (req, res, next) => {
     const token = authHeader && authHeader.split(' ')[1];
     if(!token) return res.sendStatus(401);
     if(token){
-        jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
+        jwt.verify(token, process.env.JWT_SECRET, (err, cipher ) => {
             if(err) return res.sendStatus(403);
-            req.payload = user;
+            req.cipher = cipher;
             next();
         });
     }

@@ -1,6 +1,8 @@
 const {signPayload} = require('../utilities/auth');
+const {encrypt} = require('../utilities/cryptoService');
 
 const loginUser = (req, res) => {
+    //validation of username and password can be done in validation middleware before reaching this controller
     const {username, password} = req.body;
     if(!username || !password) return res.sendStatus(400);
     else{
@@ -12,7 +14,7 @@ const loginUser = (req, res) => {
                 username,
                 password
             };
-            const token = signPayload(payload);
+            const token = (signPayload(encrypt(payload)));
             res.json({token});
         }
     }
