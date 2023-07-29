@@ -1,4 +1,10 @@
 # encryption
+## Required Environment Variables
+   - PORT=3000
+   - JWT_SECRET
+   - USER
+   - PASSWORD
+   - CRYPTO_SECRET
 
 ## **Login Api**
 ### URL: http://localhost:3000/v1/login
@@ -29,5 +35,7 @@
 ###        "password": "encrypted"
 ###    }
 ### }
+
+
 
 
